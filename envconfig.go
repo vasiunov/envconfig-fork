@@ -195,7 +195,7 @@ func Process(prefix string, spec interface{}) error {
 		// but it is only available in go1.5 or newer. We're using Go build tags
 		// here to use os.LookupEnv for >=go1.5
 		value, ok := lookupEnv(info.Key)
-		fmt.Printf("[info.Key = %s] [value = %s] [ok = %v] /n", info.Key, value, ok)
+		fmt.Printf("[info.Key = %s] [value = %s] [ok = %v]\n", info.Key, value, ok)
 		if !ok && info.Alt != "" {
 			value, ok = lookupEnv(info.Alt)
 		}
