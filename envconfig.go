@@ -184,6 +184,10 @@ func CheckDisallowed(prefix string, spec interface{}) error {
 func Process(prefix string, spec interface{}) error {
 	infos, err := gatherInfo(prefix, spec)
 
+	fmt.Println("================")
+	fmt.Printf("%+v\n", infos)
+	fmt.Println("================")
+	
 	for _, info := range infos {
 
 		// `os.Getenv` cannot differentiate between an explicitly set empty value
